@@ -670,7 +670,10 @@ SPH_3000_6000_V201 = {
         # VPP remote power control (Issue #286)
         30407: {'name': 'remote_power_control_enable', 'scale': 1, 'unit': '', 'access': 'RW', 'desc': 'Enable timed charge/discharge power override (0=off, 1=on)'},
         30408: {'name': 'remote_power_control_charging_time', 'scale': 1, 'unit': 'min', 'access': 'RW', 'desc': 'Duration for remote power control (0–1440 min)'},
-        30409: {'name': 'remote_charge_and_discharge_power', 'scale': 1, 'unit': '%', 'access': 'RW', 'signed': True, 'desc': 'Remote charge/discharge power (−100% discharge … +100% charge)'},
+                30409: {'name': 'remote_charge_and_discharge_power', 'scale': 1, 'unit': '%', 'access': 'RW',
+                'desc': 'Remote charge/discharge power (-100% to +100%, negative=discharge, positive=charge)',
+                'valid_range': (-100, 100),
+                'signed': True},
         30410: {'name': 'vpp_ac_charge_enable', 'scale': 1, 'unit': '', 'access': 'RW', 'desc': 'AC charging mode (0=off, 1=PV priority, 2=AC priority)'},
     }
 }
@@ -795,7 +798,10 @@ SPH_7000_10000_V201 = {
         # VPP remote power control (Issue #286)
         30407: {'name': 'remote_power_control_enable', 'scale': 1, 'unit': '', 'access': 'RW', 'desc': 'Enable timed charge/discharge power override (0=off, 1=on)'},
         30408: {'name': 'remote_power_control_charging_time', 'scale': 1, 'unit': 'min', 'access': 'RW', 'desc': 'Duration for remote power control (0–1440 min)'},
-        30409: {'name': 'remote_charge_and_discharge_power', 'scale': 1, 'unit': '%', 'access': 'RW', 'signed': True, 'desc': 'Remote charge/discharge power (−100% discharge … +100% charge)'},
+                30409: {'name': 'remote_charge_and_discharge_power', 'scale': 1, 'unit': '%', 'access': 'RW',
+                'desc': 'Remote charge/discharge power (-100% to +100%, negative=discharge, positive=charge)',
+                'valid_range': (-100, 100),
+                'signed': True},
         30410: {'name': 'vpp_ac_charge_enable', 'scale': 1, 'unit': '', 'access': 'RW', 'desc': 'AC charging mode (0=off, 1=PV priority, 2=AC priority)'},
     }
 }
